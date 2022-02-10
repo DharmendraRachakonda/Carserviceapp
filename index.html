@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+    <nav>
+      <div class="menu">
+        <div class="logo">
+          <a href="#">ServoCars</a>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="img"></div>
+    <div class="center">
+      <div class="title">Your Friendly Realiable </div>
+      <div class="sub_title">Local Mechanic</div>
+      <div class="btns">
+        <button>Book Now</button>
+        <button>Learn More</button>
+      </div>
+    </div>
+
+    <!--- Form details-->
+    <div class="wrapper">
+      <div class="container">
+        <div class="title">Booking Form</div>
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" >
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Date</span>
+              <label> </label><label class="validation-error hide" id="fullNameValidationError"></label>
+              <input type="date" id="date" placeholder="Select Date" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Customer Name</span>
+              <input type="text" id="custname" placeholder="Enter Your Name" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Customer Number</span>
+              <input type="text" id="custnumber" placeholder="Enter Your Number" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Email ID</span>
+              <input type="text" id="emailid" placeholder="Enter Your Email" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Services</span>
+              <input type="dropdown" id="services" placeholder="Select a service" required>
+            </div>
+             
+           </div>
+           <div class="button">
+             <input type="submit" value="Book Now">
+           </div>
+        </form>
+      </div>
+    </div>
+
+ <!--Table Code-->
+<section id="tablelist">
+    <div >
+    <table class="list" id="employeeList">
+      <thead>
+          <tr>
+              <th col-index = 1 data-colname="date-1">Date
+                <input type="date" id="filterDateSelector" onchange="filterBookings()">
+                <span onclick="removeFilters()" id="closefilterIcon" style="display:none;cursor: pointer;">❌</span>
+              </th>
+              <th col-index = 2 data-colname="custname-1">Customer Name </th>
+              <th col-index = 3 data-colname="custnumber-1">Customer Number</th>
+              <th col-index = 4 data-colname="emailid-1">Email Id</th>
+              <th col-index = 5 data-colname="services-1">Services</select></th>
+              
+          </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+  </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
